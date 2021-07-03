@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #222;
+    min-height: 100vh ;
+
+
+}
+.title{
+    color: #f4f4f4;
+ margin: 24px;
+ 
+}
+.container{
+   width: 90%;
+   margin: 0 auto;
+}
+.card{
+   
+    margin: 50px auto;
+    background: #f4f4f4;
+    color: #333;
+    border-radius: 5px;
+    width: 100%; 
+    overflow: hidden;
+    height: 450px;
+}
+.card img{
+   
+    width: 100%;
+    object-fit: contain;
+}
+.card .text{
+    padding: 24px;
+
+    transition: .5s;
+    z-index: 2;
+position: relative;
+}
+.card .text::after{
+position: absolute;
+content: "";
+top: 0;
+left: 0;
+background: #f4f4f4;
+height: 100%;
+pointer-events: none;
+width: 100%;
+z-index: -1;
+}
+
+.name{
+font-weight: 600;
+font-size: 24px;
+margin-bottom: 24px;
+
+}
+.addressAndPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.splitter{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.price{
+    background: rgb(14, 14, 14);
+    color: #f4f4f4;
+    padding:10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+ .otherRerntersOpener{
+    padding: 15px;
+    border-top: 1px solid rgb(190, 190, 190);
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+.otherRentersList{
+   transition: .5s;
+display: block;
+  background: #f4f4f4;
+    
+}
+.renterTitle{
+font-weight: 600;
+}
+.otherRenterCard{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #f4f4f4;
+padding: 10px;
+margin: 10px;
+   border: 1px solid rgb(219, 219, 219);
+
+}
+.otherText{
+    font-size: 14px;
+    padding-right: 20px;
+    width: 100%;
+}
+.rate{
+    background: rgb(223, 223, 223);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: auto;
+    border: 1px solid grey;
+    text-align: center;
+}
+.otherRenterCard img{
+   border-radius: 10px;
+    object-fit: cover;
+    width: 30%;
+    margin-right: 10px;
+  
+}
+.otherRentersListForBigScreen{
+    display: none;
+    
+}
+
+/* CUSTOM MADE ICONS ---DONT RECOMMEND--- we can use fa */
+/* hamburger Menu */
+.bars{
+    height: 12px;
+    width: 12px;
+    position: relative;
+    margin-right: 10px;
+    display: block;
+}
+.bars span:nth-child(1){
+    position: absolute;
+   top: 0px;
+    width: 100%;
+    height: 2px;
+    background: black;
+}
+.bars span:nth-child(2){
+    position: absolute;
+   top: 5px;
+   
+    width: 100%;
+    height: 2px;
+    background: black
+}
+.bars span:nth-child(3){
+    position: absolute;
+   top: 10px;
+   
+    width: 100%;
+    height: 2px;
+    background: black
+}
+
+/* close Icon */
+.close{
+    height: 12px;
+    width: 12px;
+    position: relative;
+    margin-right: 10px;
+    display: none;
+}
+.close span:nth-child(1){
+    position: absolute;
+   margin-top: 5px;
+   transform: rotate(-45deg);
+    width: 150%;
+    height: 2px;
+    background: black;
+}
+.close span:nth-child(2){
+    position: absolute;
+  margin-top: 5px;
+   transform: rotate(45deg);
+    width: 150%;
+    height: 2px;
+    background: black
+}
+/* Profile Icon */
+.profileIcon{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    margin-left: -5px;
+}
+.profileIcon .circle{
+    position: absolute;
+    top: 0;
+    left: 4px;
+    background: #555;
+    width:7px;
+    height:7px;
+    border-radius: 50%;
+
+}
+.profileIcon .rect{
+    position: absolute;
+    bottom: 0;
+   left: 0;
+    background: #555;
+   width: 100%;
+    height: 6px;
+    border-radius: 4px;
+}
+
+/* circleIcon */
+.circleIcon{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    background: #555;
+    border-radius: 50%;
+    margin-bottom: -2px;
+    display: inline-block;
+}
+.circleIcon .inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f4f4f4;
+}
+.otherAddress{
+    margin: 15px 0;
+}
+
+/* shopIcon */
+.shopIcon{
+    width: 15px;
+    height: 15px;
+    position: relative;
+   
+}
+.shopIcon .tri {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 13px;
+    left: -5px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 5px solid rgba(85, 85, 85);
+  }
+  .shopIcon .outerShop{
+    position: absolute;
+    width: 18px;
+    height: 15px;
+    background: rgba(85, 85, 85);
+
+    bottom: -18px;
+    left: -5px;
+  }
+  .shopIcon .innterShop{
+    position: absolute;
+    width: 11px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.973);
+    left: -1.5px;
+    bottom: -14px;
+  
+  }
+
+  @media screen and (min-width:450px){
+.card{
+    height: 500px;
+}
+  }
+  @media screen and (min-width:530px){
+    .card{
+        height: 530px;
+    }
+  }
+  @media screen and (min-width:580px){
+    .card{
+        height: 560px;
+    }
+  }
+
+  @media screen and (min-width:600px){
+    .card{
+        height: 580px;
+    }
+  }
+
+  @media screen and (min-width:620px){
+    .card{
+        height: 600px;
+    }
+  }
+
+  @media screen and (min-width:640px){
+    .card{
+        height: 610px;
+    }
+  }
+
+  @media screen and (min-width:660px){
+    .card{
+        height: 630px;
+    }
+  }
+
+  @media screen and (min-width:680px){
+    .card{
+        height: 650px;
+    }
+  }
+  @media screen and (min-width:700px){
+    .card{
+        height: 670px;
+    }
+  }
+
+
+
+@media screen and (min-width:900px){
+    .otherRerntersOpener{
+        display: none;
+    }
+    .card{
+        height: 70vh; 
+        max-height: 500px;
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .otherRentersListForBigScreen{
+        display: block;
+        
+        height: 100%;
+        border-left: 1px solid rgba(128, 128, 128, 0.151);
+    }
+    .otherRentersList{
+        display: none;
+    }
+   
+    .container{
+        width: 90%;
+        margin: 10px;
+     }
+
+} 
